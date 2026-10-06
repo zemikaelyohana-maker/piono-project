@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #1a1635;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #a0a0c0;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.piano {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.key {
+  background-color: #ffffff;
+  color: #333333;
+  width: 70px;
+  height: 240px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5px;
+  transition: background-color 0.1s ease, transform 0.1s ease;
+  user-select: none;
+}
+
+.note-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.solfege {
+  font-size: 0.85rem;
+  color: #777777;
+}
+
+.kb-hint {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background-color: #f8f8f8;
+}
+
+/* Active state when pressed */
+.key.active {
+  background-color: #f1c40f;
+  transform: translateY(4px);
+}
+
+.key.active .kb-hint {
+  background-color: #e2b607;
+  border-color: #b89300;
+}
